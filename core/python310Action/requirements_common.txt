@@ -9,9 +9,5 @@ scrapy==2.5.0
 simplejson==3.17.5
 virtualenv==20.8.0
 twisted==21.7.0
-<<<<<<< HEAD
-netifaces==0.11.0
-=======
 netifaces==0.11.0
 pyyaml==6.0
->>>>>>> d90cecf (adding runtime python311 and yaml)
