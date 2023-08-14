@@ -39,7 +39,7 @@ FROM python:3.11-buster
 ARG GO_PROXY_BUILD_FROM=release
 
 # install zip
-RUN apt-get update && apt-get install -y zip gcc \
+RUN apt-get update && apt-get install -y zip python3-psycopg2 python3-lxml \
     && rm -rf /var/lib/apt/lists/*
 
 # Install common modules for python
