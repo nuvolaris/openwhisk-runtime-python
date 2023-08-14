@@ -76,4 +76,6 @@ ENV OW_EXECUTION_ENV=openwhisk/action-python-v3.11
 # compiler script
 ENV OW_COMPILER=/bin/compile
 
+RUN chown nobody:root /action ; chmod 0775 /action
+USER nobody
 ENTRYPOINT ["/bin/proxy"]

@@ -12,3 +12,6 @@ twisted==21.7.0
 netifaces==0.11.0
 pyyaml==6.0
 redis==4.4.2
+boto3==1.28.25
+psycopg==3.10.10
+pymongo==4.4.1
