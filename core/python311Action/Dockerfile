@@ -39,14 +39,14 @@ FROM python:3.11-buster
 ARG GO_PROXY_BUILD_FROM=release
 
 # install zip
-RUN apt-get update && apt-get install -y zip python3-psycopg2 python3-lxml \
+RUN apt-get update && apt-get install -y zip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install common modules for python
 COPY requirements_common.txt requirements_common.txt
 COPY requirements.txt requirements.txt
-RUN pip3 install --upgrade pip six wheel &&\
-    pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --upgrade pip six wheel virtualenv
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN mkdir -p /action
 WORKDIR /
