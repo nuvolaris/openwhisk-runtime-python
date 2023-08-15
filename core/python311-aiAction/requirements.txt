@@ -1,8 +1,0 @@
-# default packages available for action-python-v3.10
--r requirements_common.txt
-
-# additional requirement
-duckdb==0.8.1
-
-# fix issue: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools
-setuptools == 66.0.0
