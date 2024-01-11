@@ -14,6 +14,7 @@ boto3==1.28.25
 psycopg==3.1.10
 pymongo==4.4.1
 minio==7.1.16
-openai==0.28.0
+openai==1.7.1
 auth0-python==4.6.0
-langchain==0.0.340
+langchain==0.1.0
+farm-haystack==1.23.0
