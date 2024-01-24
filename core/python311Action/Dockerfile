@@ -39,7 +39,7 @@ FROM python:3.11-buster
 ARG GO_PROXY_BUILD_FROM=release
 
 # install zip
-RUN apt-get update && apt-get install -y zip \
+RUN apt-get update && apt-get install -y python3-lxml python3-psycopg2 zip xpdf \
     && rm -rf /var/lib/apt/lists/*
 
 # Install common modules for python
@@ -66,6 +66,8 @@ ENV OW_WAIT_FOR_ACK=1
 ENV OW_EXECUTION_ENV=openwhisk/action-python-v3.11
 # compiler script
 ENV OW_COMPILER=/bin/compile
+# home directory
+ENV HOME=/tmp
 
 RUN chown nobody:root /action ; chmod 0775 /action
 USER nobody
